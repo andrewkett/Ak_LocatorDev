@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MageBrews_LocatorDev>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <MageBrews_Locator />
+            </depends>
+        </MageBrews_LocatorDev>
+    </modules>
+</config>

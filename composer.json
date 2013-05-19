@@ -1,0 +1,15 @@
+{
+    "name": "andrewkett/magebrews_locatordev",
+    "license": "OSL-3.0",
+    "type": "magento-module",
+    "description": "Test Data and utils for MageBrews_Locator extension development",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*",
+        "andrewkett/magebrews_locatordev":"*"
+    },
+    "authors":[
+        {
+            "name":"Andrew Kett"
+        }
+    ]
+}

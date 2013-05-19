@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MageBrews_LocatorDev>
+            <version>0.0.1</version>
+        </MageBrews_LocatorDev>
+    </modules>
+    <global>
+        <models>
+            <magebrews_locatordev>
+                <class>MageBrews_LocatorDev_Model</class>
+            </magebrews_locatordev>
+        </models>
+        <resources>
+            <magebrews_locatordev_setup>
+                <setup>
+                    <module>MageBrews_LocatorDev</module>
+                    <class>MageBrews_LocatorDev_Model_Resource_Setup</class>
+                </setup>
+            </magebrews_locatordev_setup>
+        </resources>
+    </global>
+    <adminhtml>
+        <menu>
+            <magebrews_locator>
+                <title>Locator</title>
+                <sort_order>70</sort_order>
+                <children>
+                    <install_testdata>
+                        <title>Install Test Data</title>
+                        <action>adminhtml/locatordev/installtestdata</action>
+                        <sort_order>50</sort_order>
+                    </install_testdata>
+                </children>
+            </magebrews_locator>
+        </menu>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <magebrews_locatordev before="Mage_Adminhtml">MageBrews_LocatorDev_Adminhtml</magebrews_locatordev>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>
