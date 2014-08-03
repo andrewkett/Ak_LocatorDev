@@ -8,11 +8,11 @@
  */
 
 
-class MageBrews_LocatorDev_Adminhtml_LocatordevController extends Mage_Adminhtml_Controller_Action
+class Ak_LocatorDev_Adminhtml_LocatordevController extends Mage_Adminhtml_Controller_Action
 {
     public function installtestdataAction()
     {
-        Mage::getModel('magebrews_locatordev/import')->run();
+
     }
 
 }

@@ -1,19 +1,19 @@
 <?php
 
 /**
- * @category   MageBrews_LocatorDev
- * @package    MageBrews_LocatorDev
+ * @category   Ak_LocatorDev
+ * @package    Ak_LocatorDev
  * @author     Andrew Kett
  */
 
-class MageBrews_LocatorDev_Model_Import extends Varien_Object
+class Ak_LocatorDev_Model_Import extends Varien_Object
 {
     private $headers = array();
 
     public function run()
     {
         //die('run import');
-        $filepath =  Mage::getModuleDir('','MageBrews_LocatorDev') .'/data/nz-supermarkets.csv';
+        $filepath =  Mage::getModuleDir('','Ak_LocatorDev') .'/data/nz-supermarkets.csv';
         $i = 0;
         if(($handle = fopen("$filepath", "r")) !== FALSE) {
             while(($data = fgetcsv($handle, 1000, ",")) !== FALSE){
@@ -33,7 +33,7 @@ class MageBrews_LocatorDev_Model_Import extends Varien_Object
 
     public function saveFromCsv($data)
     {
-        $loc = Mage::getModel('magebrews_locator/location');
+        $loc = Mage::getModel('ak_locator/location');
 
         if(count($loc->getCollection()->addAttributeToSelect('*')->addAttributeToFilter('store_code',$data['id']))){
             echo 'updating existing store '.trim($data['name']).PHP_EOL;

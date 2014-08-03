@@ -1,7 +1,7 @@
 <?php
 $installer = $this;
 
-$installer->addAttribute('magebrews_locator_location', 'website', array(
+$installer->addAttribute('ak_locator_location', 'website', array(
     'input'         => 'text',
     'type'          => 'text',
     'label'         => 'Website',
@@ -13,7 +13,7 @@ $installer->addAttribute('magebrews_locator_location', 'website', array(
     'global'        => Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_GLOBAL,
 ));
 
-$installer->addAttribute('magebrews_locator_location', 'store_code', array(
+$installer->addAttribute('ak_locator_location', 'store_code', array(
     'input'         => 'text',
     'type'          => 'text',
     'label'         => 'Store Code',
@@ -33,7 +33,7 @@ $formAttributes = array(
 $eavConfig = Mage::getSingleton('eav/config');
 
 foreach($formAttributes as $code){
-    $attribute = $eavConfig->getAttribute('magebrews_locator_location', $code);
+    $attribute = $eavConfig->getAttribute('ak_locator_location', $code);
     $attribute->setData('used_in_forms', array('location_edit','location_create'));
     $attribute->save();
 }
