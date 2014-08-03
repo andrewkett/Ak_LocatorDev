@@ -20,30 +20,30 @@
             </ak_locatordev_setup>
         </resources>
     </global>
-    <adminhtml>
-        <menu>
-            <ak_locator>
-                <title>Locator</title>
-                <sort_order>70</sort_order>
-                <children>
-                    <install_testdata>
-                        <title>Install Test Data</title>
-                        <action>adminhtml/locatordev/installtestdata</action>
-                        <sort_order>50</sort_order>
-                    </install_testdata>
-                </children>
-            </ak_locator>
-        </menu>
-    </adminhtml>
-    <admin>
-        <routers>
-            <adminhtml>
-                <args>
-                    <modules>
-                        <ak_locatordev before="Mage_Adminhtml">Ak_LocatorDev_Adminhtml</ak_locatordev>
-                    </modules>
-                </args>
-            </adminhtml>
-        </routers>
-    </admin>
+    <!--<adminhtml>-->
+        <!--<menu>-->
+            <!--<ak_locator>-->
+                <!--<title>Locator</title>-->
+                <!--<sort_order>70</sort_order>-->
+                <!--<children>-->
+                    <!--<install_testdata>-->
+                        <!--<title>Install Test Data</title>-->
+                        <!--<action>adminhtml/locatordev/installtestdata</action>-->
+                        <!--<sort_order>50</sort_order>-->
+                    <!--</install_testdata>-->
+                <!--</children>-->
+            <!--</ak_locator>-->
+        <!--</menu>-->
+    <!--</adminhtml>-->
+    <!--<admin>-->
+        <!--<routers>-->
+            <!--<adminhtml>-->
+                <!--<args>-->
+                    <!--<modules>-->
+                        <!--<ak_locatordev before="Mage_Adminhtml">Ak_LocatorDev_Adminhtml</ak_locatordev>-->
+                    <!--</modules>-->
+                <!--</args>-->
+            <!--</adminhtml>-->
+        <!--</routers>-->
+    <!--</admin>-->
 </config>
