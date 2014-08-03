@@ -1,2 +1,3 @@
-src/app/code/local/MageBrews/LocatorDev     app/code/local/MageBrews/LocatorDev
-src/app/etc/modules/*    app/etc/modules/
+src/app/code/communtity/Ak/LocatorDev     app/code/communtity/Ak/LocatorDev
+src/app/etc/modules/*                     app/etc/modules/
+src/shell/locator/*                       shell/locator/
