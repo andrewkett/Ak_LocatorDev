@@ -35,22 +35,11 @@ class Ak_LocatorDev_Model_Import extends Varien_Object
     {
         $loc = Mage::getModel('ak_locator/location');
 
-        if(count($loc->getCollection()->addAttributeToSelect('*')->addAttributeToFilter('store_code',$data['id']))){
-            //echo 'updating existing store '.trim($data['name']).PHP_EOL;
-            $loc = $loc->getCollection()
-                        ->addAttributeToSelect('*')
-                        ->addAttributeToFilter('store_code',$data['id'])
-                        ->getFirstItem();
-        }else{
-            //echo 'importing new store '.trim($data['name']).PHP_EOL;
-        }
 
         //add all attributes that can be copied across directly without manipulation
         $mapper = array(
             'title' => 'name',
             'address' => 'address',
-            'website' => 'website',
-            'store_code' => 'id',
             'latitude' =>'geometry_y',
             'longitude' => 'geometry_x'
         );
